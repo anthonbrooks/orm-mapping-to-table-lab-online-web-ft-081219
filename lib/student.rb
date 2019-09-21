@@ -32,7 +32,7 @@ class Student
       INSERT INTO students (name, grade) 
       VALUES (?, ?)
     SQL
-    DB[:conn]
+    DB[:conn].execute(sql, Song.name, Student.grade)
   end 
   
   def self.create
